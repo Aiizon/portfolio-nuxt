@@ -2,6 +2,8 @@
 const route = useRoute();
 const slug: string = route.params.slug as string;
 
+import '~/assets/styles/projects.scss';
+
 const { data: project } = await useAsyncData(slug, async () => {
     return await queryCollection('projects')
         .path(`/projects/${slug}`)
@@ -79,99 +81,6 @@ onMounted(() => {
         border-radius: 40px;
         font-family: "Inter", sans-serif;
         font-weight: 400;
-
-        .project-body {
-            width: 100%;
-            color: var(--font-color);
-            font-family: "Inter", sans-serif;
-            font-size: var(--text-medium);
-            line-height: 1.6;
-            margin-bottom: 2rem;
-
-            h1, h2, h3, h4, h5, h6 {
-                margin: 1.5rem 0 1rem 0;
-                font-weight: 600;
-            }
-
-            a {
-                color: var(--font-color);
-                text-decoration: underline;
-                transition: color 0.3s;
-
-                &:hover {
-                    color: var(--accent-dark);
-                }
-            }
-
-            h1 {
-                font-size: var(--text-xx-large);
-            }
-
-            h2 {
-                font-size: var(--text-x-large);
-            }
-
-            h3 {
-                font-size: var(--text-large);
-            }
-
-            p {
-                margin: 1rem 0;
-            }
-
-            ul, ol {
-                margin: 1rem 0;
-                padding-left: 1.5rem;
-            }
-
-            li {
-                margin-bottom: 0.5rem;
-            }
-
-            code {
-                font-family: monospace;
-                background-color: rgba(0, 0, 0, 0.1);
-                padding: 0.2rem 0.4rem;
-                border-radius: 4px;
-            }
-
-            pre {
-                background-color: var(--accent-dark);
-                color: var(--font-light);
-                padding: 1rem;
-                border-radius: 10px;
-                overflow-x: auto;
-                margin: 1.5rem 0;
-            }
-
-            img {
-                max-width: 100%;
-                border-radius: 10px;
-                margin: 1.5rem 0;
-            }
-
-            blockquote {
-                border-left: 4px solid var(--primary-color);
-                padding-left: 1rem;
-                margin: 1.5rem 0;
-                font-style: italic;
-            }
-
-            table {
-                width: 100%;
-                border-collapse: collapse;
-                margin: 1.5rem 0;
-
-                th, td {
-                    border: 1px solid var(--accent-font);
-                    padding: 0.5rem;
-                }
-
-                th {
-                    background-color: var(--primary-color);
-                }
-            }
-        }
 
         p {
             margin: 1rem 0;
