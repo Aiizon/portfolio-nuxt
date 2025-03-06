@@ -4,8 +4,27 @@ export default defineNuxtConfig({
     enabled: true
   },
   modules: [
-      '@nuxt/content'
+    '@nuxt/content'
   ],
+  content: {
+    database: {
+      type: 'sqlite',
+      filename: 'SQLITE_DB_LOCATION',
+    },
+    build: {
+      markdown: {
+        toc: {
+          depth: 3,
+          searchDepth: 3,
+        },
+        remarkPlugins: {},
+        rehypePlugins: {},
+        highlight: {
+          theme: 'github-dark'
+        }
+      }
+    }
+  },
   app: {
     head: {
       script: [
@@ -23,4 +42,4 @@ export default defineNuxtConfig({
       ]
     }
   }
-})
+});

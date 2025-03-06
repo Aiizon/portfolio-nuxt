@@ -5,20 +5,22 @@
 <template>
     <footer>
         <p>Fait avec ❤️ avec <NuxtLink to="https://vuejs.org/">Vue.js</NuxtLink> & <NuxtLink to="https://nuxt.com">Nuxt</NuxtLink></p>
-        <p>&copy; 2024 - Killian Bonneau - <NuxtLink to="/public">Mentions légales</NuxtLink></p>
+        <p>&copy; 2024 - Killian Bonneau - <NuxtLink to="/">Mentions légales</NuxtLink></p>
     </footer>
 </template>
 
 <style scoped lang="scss">
 footer {
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
+    padding: 1rem 0;
     background-color: var(--accent-dark);
     color: white;
     font-size: 0.8rem;
+    margin-top: auto;
 }
 
 a {

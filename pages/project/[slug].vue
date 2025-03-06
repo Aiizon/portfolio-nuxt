@@ -1,34 +1,36 @@
 <script setup lang="ts">
-import { ref, Ref } from "vue";
+const route = useRoute();
+const slug: string = route.params.slug as string;
 
-const props = defineProps({
-  slug: String
+const { data: project } = await useAsyncData(slug, async () => {
+    return await queryCollection('projects')
+        .path(`/projects/${slug}`)
+        .first()
+    ;
 });
 
-const projectList: Ref<Array<null>> = ref([]);
-const project: null = null;
-
-if (!project) {
-    window.location.href = '/404';
-}
+onMounted(() => {
+    if (project.value === null) {
+        navigateTo('/404');
+    }
+});
 </script>
 
 <template>
-<main id="project">
-    <div class="project-banner">
-        <img :src="project.bannerImage" :alt="project.title"/>
-        <SectionTitle :title="project.title"/>
-    </div>
-    <div class="project-content">
-        <p>{{ project.description }}</p>
-        <p>{{ project.text }}</p>
-        <div class="project-links">
-            <a v-if="project.repositoryLink" :href="project.repositoryLink" target="_blank" rel="noopener noreferrer">Voir le projet</a>
-            <a v-if="project.demoLink" :href="project.demoLink" target="_blank" rel="noopener noreferrer">Voir la démo</a>
+    <main id="project" v-if="project">
+        <div class="project-banner">
+            <img :src="String(project.meta.bannerImage)" :alt="project.seo.title"/>
+            <SectionTitle :title="project.seo.title"/>
         </div>
-    </div>
-    <NuxtLink class="return" to="/projects">Retour aux projets</NuxtLink>
-</main>
+        <div class="project-content">
+            <ContentRenderer :value="project.body" class="project-body"/>
+            <div class="project-links">
+                <a v-if="project.meta.repositoryLink" :href="String(project.meta.repositoryLink)" target="_blank" rel="noopener noreferrer">Voir le projet</a>
+                <a v-if="project.meta.demoLink" :href="String(project.meta.demoLink)" target="_blank" rel="noopener noreferrer">Voir la démo</a>
+            </div>
+        </div>
+        <NuxtLink class="return" to="/projects">Retour aux projets</NuxtLink>
+    </main>
 </template>
 
 <style scoped lang="scss">
@@ -49,6 +51,9 @@ if (!project) {
 
         img {
             width: 100%;
+            aspect-ratio: 5/1;
+            object-fit: cover;
+            object-position: center;
             border-bottom-left-radius: 20px;
             border-bottom-right-radius: 20px;
         }
@@ -74,6 +79,99 @@ if (!project) {
         border-radius: 40px;
         font-family: "Inter", sans-serif;
         font-weight: 400;
+
+        .project-body {
+            width: 100%;
+            color: var(--font-color);
+            font-family: "Inter", sans-serif;
+            font-size: var(--text-medium);
+            line-height: 1.6;
+            margin-bottom: 2rem;
+
+            h1, h2, h3, h4, h5, h6 {
+                margin: 1.5rem 0 1rem 0;
+                font-weight: 600;
+            }
+
+            a {
+                color: var(--font-color);
+                text-decoration: underline;
+                transition: color 0.3s;
+
+                &:hover {
+                    color: var(--accent-dark);
+                }
+            }
+
+            h1 {
+                font-size: var(--text-xx-large);
+            }
+
+            h2 {
+                font-size: var(--text-x-large);
+            }
+
+            h3 {
+                font-size: var(--text-large);
+            }
+
+            p {
+                margin: 1rem 0;
+            }
+
+            ul, ol {
+                margin: 1rem 0;
+                padding-left: 1.5rem;
+            }
+
+            li {
+                margin-bottom: 0.5rem;
+            }
+
+            code {
+                font-family: monospace;
+                background-color: rgba(0, 0, 0, 0.1);
+                padding: 0.2rem 0.4rem;
+                border-radius: 4px;
+            }
+
+            pre {
+                background-color: var(--accent-dark);
+                color: var(--font-light);
+                padding: 1rem;
+                border-radius: 10px;
+                overflow-x: auto;
+                margin: 1.5rem 0;
+            }
+
+            img {
+                max-width: 100%;
+                border-radius: 10px;
+                margin: 1.5rem 0;
+            }
+
+            blockquote {
+                border-left: 4px solid var(--primary-color);
+                padding-left: 1rem;
+                margin: 1.5rem 0;
+                font-style: italic;
+            }
+
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin: 1.5rem 0;
+
+                th, td {
+                    border: 1px solid var(--accent-font);
+                    padding: 0.5rem;
+                }
+
+                th {
+                    background-color: var(--primary-color);
+                }
+            }
+        }
 
         p {
             margin: 1rem 0;
@@ -104,7 +202,7 @@ if (!project) {
     }
 
     .return {
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
         padding: 1rem;
         background-color: var(--accent-dark);
         border-radius: 20px;
@@ -123,7 +221,8 @@ if (!project) {
     @media (max-width: 768px) {
         .project-banner {
             img {
-                min-width: fit-content;
+                width: fit-content;
+                aspect-ratio: 81;
                 border-bottom-left-radius: 0;
                 border-bottom-right-radius: 0;
             }
@@ -142,6 +241,22 @@ if (!project) {
 
             p {
                 margin: 0.5rem 0;
+            }
+
+            .project-body {
+                font-size: var(--text-small);
+
+                h1 {
+                    font-size: var(--text-x-large);
+                }
+
+                h2 {
+                    font-size: var(--text-large);
+                }
+
+                h3 {
+                    font-size: var(--text-medium);
+                }
             }
 
             .project-links {
