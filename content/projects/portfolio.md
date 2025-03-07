@@ -9,7 +9,7 @@ smallImage: /img/projects/portfolio-small.png
 repositoryLink: https://github.com/Aiizon/portfolio
 demoLink: https://portfolio.example.com
 tags: ["Nuxt", "TypeScript", "SCSS"]
-createdAt: "2024-01-15"
+createdAt: "2025-02-15"
 ---
 
 ## À propos du projet
