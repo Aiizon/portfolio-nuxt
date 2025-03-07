@@ -1,24 +1,25 @@
 <script setup lang="ts">
-import { ref, Ref } from "vue";
 import SectionTitle from "~/components/SectionTitle.vue";
 
-const projectList: Ref<Array<null>> = ref([]);
+const { data: projects } = await useAsyncData('projects', () => {
+    return queryCollection('projects').all();
+});
 </script>
 
 <template>
-<main id="projects">
-    <SectionTitle title="Mes projets"/>
-    <div class="projects-items">
-<!--        <div v-for="project in projectList" :key="project.id" class="projects-item">-->
-<!--            <img :src="project.smallImage" :alt="project.title"/>-->
-<!--            <div class="projects-item-content">-->
-<!--                <h2>{{ project.title }}</h2>-->
-<!--                <p>{{ project.shortDescription }}</p>-->
-<!--                <NuxtLink :to="'project/' + project.slug">En savoir plus</NuxtLink>-->
-<!--            </div>-->
-<!--        </div>-->
-    </div>
-</main>
+    <main id="projects">
+        <SectionTitle title="Mes projets"/>
+        <div class="projects-items">
+            <div v-for="project in projects" :key="project.id" class="projects-item">
+                <img :src="String(project.meta.smallImage)" :alt="project.seo.title"/>
+                <div class="projects-item-content">
+                    <h2>{{ project.seo.title }}</h2>
+                    <p>{{ project.meta.shortDescription }}</p>
+                    <NuxtLink :to="`project/${String(project.meta.slug)}`">En savoir plus</NuxtLink>
+                </div>
+            </div>
+        </div>
+    </main>
 </template>
 
 <style scoped lang="scss">
@@ -27,7 +28,7 @@ const projectList: Ref<Array<null>> = ref([]);
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    min-height: 95vh;
+    min-height: 88vh;
     background-color: var(--secondary-color);
 
     .projects-items {
@@ -50,6 +51,9 @@ const projectList: Ref<Array<null>> = ref([]);
 
             img {
                 width: 100%;
+                aspect-ratio: 2/1;
+                object-fit: cover;
+                object-position: center;
                 border-top-left-radius: 20px;
                 border-top-right-radius: 20px;
             }

@@ -16,8 +16,8 @@ import SectionTitle from "~/components/SectionTitle.vue";
         <div class="about-download">
             Télécharger :
             <div class="about-download-links">
-                <a href="/public" download="">Mon CV</a>
-                <a href="/public" download="">Mon tableau <br> pour l'E5</a>
+                <a href="/" download="">Mon CV</a>
+                <a href="/" download="">Mon tableau <br> pour l'E5</a>
             </div>
         </div>
     </section>

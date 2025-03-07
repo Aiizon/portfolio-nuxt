@@ -5,12 +5,12 @@
     <main id="not-found">
         <div class="not-found-logo">
             <img src="/img/404.png" alt="Logo représentant l'erreur 404">
-            <p>Crédits: SAWARATSUKI@<a href="https://github.com/SAWARATSUKI/KawaiiLogos" ref="_blank" rel="noopener noreferrer">GitHub</a></p>
+            <p>Crédits: SAWARATSUKI@<NuxtLink href="https://github.com/SAWARATSUKI/KawaiiLogos" ref="_blank" rel="noopener noreferrer">GitHub</NuxtLink></p>
         </div>
         <div class="not-found-content">
             <h1>404</h1>
             <p>Oups ! La page que vous cherchez n'existe pas.</p>
-            <NuxtLink to="/public">Retourner à l'accueil</NuxtLink>
+            <NuxtLink to="/">Retourner à l'accueil</NuxtLink>
         </div>
     </main>
 </template>
@@ -22,8 +22,8 @@
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    height: 90vh;
-    width: 100vw;
+    height: 88vh;
+    width: 100%;
     background-color: var(--secondary-color);
 
     .not-found-logo {

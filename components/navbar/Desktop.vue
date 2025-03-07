@@ -1,10 +1,12 @@
 <script setup lang="ts">
-
 import ThemeSwitch from '~/components/ThemeSwitch.vue'
+
+const route = useRoute();
+const isProjectRoute = computed(() => route.name === 'project-slug');
 </script>
 
 <template>
-    <div class="navbar-container">
+    <div class="navbar-container" :class="{ 'project-page': isProjectRoute }">
         <img class="avatar-small" src="/img/avatar.jpg" alt="Avatar">
         <div class="navbar-items">
             <div class="menu-items">
@@ -34,6 +36,18 @@ import ThemeSwitch from '~/components/ThemeSwitch.vue'
     height: 5rem;
     margin: 0 auto;
     background: var(--darker-bg);
+
+    &.project-page {
+        .navbar-items {
+            .menu-items a {
+                color: var(--font-light);
+            }
+
+            .theme-span {
+                color: var(--font-light);
+            }
+        }
+    }
 
     .avatar-small {
         display: block;
@@ -75,7 +89,7 @@ import ThemeSwitch from '~/components/ThemeSwitch.vue'
             font-optical-sizing: auto;
             font-weight: 500;
             font-style: normal;
-            color: var(--font-color);
+            color: var(--font-light);
         }
     }
 }

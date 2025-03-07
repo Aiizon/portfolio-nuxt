@@ -1,34 +1,38 @@
 <script setup lang="ts">
-import { ref, Ref } from "vue";
+const route = useRoute();
+const slug: string = route.params.slug as string;
 
-const props = defineProps({
-  slug: String
+import '~/assets/styles/projects.scss';
+
+const { data: project } = await useAsyncData(slug, async () => {
+    return await queryCollection('projects')
+        .path(`/projects/${slug}`)
+        .first()
+    ;
 });
 
-const projectList: Ref<Array<null>> = ref([]);
-const project: null = null;
-
-if (!project) {
-    window.location.href = '/404';
-}
+onMounted(() => {
+    if (project.value === null) {
+        navigateTo('/404');
+    }
+});
 </script>
 
 <template>
-<main id="project">
-    <div class="project-banner">
-        <img :src="project.bannerImage" :alt="project.title"/>
-        <SectionTitle :title="project.title"/>
-    </div>
-    <div class="project-content">
-        <p>{{ project.description }}</p>
-        <p>{{ project.text }}</p>
-        <div class="project-links">
-            <a v-if="project.repositoryLink" :href="project.repositoryLink" target="_blank" rel="noopener noreferrer">Voir le projet</a>
-            <a v-if="project.demoLink" :href="project.demoLink" target="_blank" rel="noopener noreferrer">Voir la démo</a>
+    <main id="project" v-if="project">
+        <div class="project-banner">
+            <img :src="String(project.meta.bannerImage)" :alt="project.seo.title"/>
+            <SectionTitle :title="project.seo.title"/>
         </div>
-    </div>
-    <NuxtLink class="return" to="/projects">Retour aux projets</NuxtLink>
-</main>
+        <div class="project-content">
+            <ContentRenderer :value="project.body" class="project-body"/>
+            <div class="project-links">
+                <a v-if="project.meta.repositoryLink" :href="String(project.meta.repositoryLink)" target="_blank" rel="noopener noreferrer">Voir le projet</a>
+                <a v-if="project.meta.demoLink" :href="String(project.meta.demoLink)" target="_blank" rel="noopener noreferrer">Voir la démo</a>
+            </div>
+        </div>
+        <NuxtLink class="return" to="/projects">Retour aux projets</NuxtLink>
+    </main>
 </template>
 
 <style scoped lang="scss">
@@ -49,6 +53,9 @@ if (!project) {
 
         img {
             width: 100%;
+            aspect-ratio: 5/1;
+            object-fit: cover;
+            object-position: center;
             border-bottom-left-radius: 20px;
             border-bottom-right-radius: 20px;
         }
@@ -104,7 +111,7 @@ if (!project) {
     }
 
     .return {
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
         padding: 1rem;
         background-color: var(--accent-dark);
         border-radius: 20px;
@@ -123,7 +130,8 @@ if (!project) {
     @media (max-width: 768px) {
         .project-banner {
             img {
-                min-width: fit-content;
+                width: fit-content;
+                aspect-ratio: 81;
                 border-bottom-left-radius: 0;
                 border-bottom-right-radius: 0;
             }
@@ -142,6 +150,22 @@ if (!project) {
 
             p {
                 margin: 0.5rem 0;
+            }
+
+            .project-body {
+                font-size: var(--text-small);
+
+                h1 {
+                    font-size: var(--text-x-large);
+                }
+
+                h2 {
+                    font-size: var(--text-large);
+                }
+
+                h3 {
+                    font-size: var(--text-medium);
+                }
             }
 
             .project-links {
