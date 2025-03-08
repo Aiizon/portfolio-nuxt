@@ -14,7 +14,7 @@ const isProjectRoute = computed(() => route.name === 'project-slug');
                 <NuxtLink to="/#about">A propos</NuxtLink>
                 <NuxtLink to="/#skills">Compétences</NuxtLink>
                 <NuxtLink to="/projects">Projets</NuxtLink>
-                <NuxtLink to="/">Veille technologique</NuxtLink>
+                <NuxtLink to="/tech-watch">Veille technologique</NuxtLink>
                 <NuxtLink to="/#contact">Contact</NuxtLink>
             </div>
             <span class="theme-span">Thème :</span>
@@ -51,8 +51,8 @@ const isProjectRoute = computed(() => route.name === 'project-slug');
 
     .avatar-small {
         display: block;
-        max-width: 40px;
-        max-height: 40px;
+        width: 40px;
+        height: 40px;
         border-radius: 999px;
         margin-left: 1rem;
     }
@@ -89,7 +89,7 @@ const isProjectRoute = computed(() => route.name === 'project-slug');
             font-optical-sizing: auto;
             font-weight: 500;
             font-style: normal;
-            color: var(--font-light);
+            color: var(--font-color);
         }
     }
 }
