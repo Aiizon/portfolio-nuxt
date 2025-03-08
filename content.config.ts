@@ -21,6 +21,10 @@ export default defineContentConfig({
         projects: defineCollection({
             type: 'page',
             source: 'projects/*.md'
+        }),
+        techWatch: defineCollection({
+            type: 'page',
+            source: "tech-watch/*.md"
         })
     }
 });
