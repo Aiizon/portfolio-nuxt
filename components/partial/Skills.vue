@@ -1,47 +1,51 @@
 <script setup lang="ts">
 import SectionTitle from "~/components/SectionTitle.vue";
+
+useScrollAnimation();
 </script>
 
 <template>
     <section id="skills">
-        <SectionTitle title="Mes compétences"/>
+        <div class="fade-up">
+            <SectionTitle title="Mes compétences"/>
+        </div>
         <div class="skills-items">
-            <div class="skills-item">
+            <div class="skills-item fade-up">
                 <img src="/img/skills/symfony.png" alt="Logo Symfony"/>
                 <div class="skills-item-content">
                     <p>Développement web côté serveur</p>
                     <p>Avec PHP & Symfony</p>
                 </div>
             </div>
-            <div class="skills-item">
+            <div class="skills-item fade-up">
                 <img src="/img/skills/vuejs.png" alt="Logo Vue.js"/>
                 <div class="skills-item-content">
                     <p>Développement web côté client</p>
                     <p>Avec TypeScript, Vue.js & SASS</p>
                 </div>
             </div>
-            <div class="skills-item">
+            <div class="skills-item fade-up">
                 <img src="/img/skills/csharp.png" alt="Logo CSharp"/>
                 <div class="skills-item-content">
                     <p>Développement de logiciels PC</p>
                     <p>Avec Microsoft C#</p>
                 </div>
             </div>
-            <div class="skills-item">
+            <div class="skills-item fade-up">
                 <img src="/img/skills/mariadb.png" alt="Logo MariaDB"/>
                 <div class="skills-item-content">
                     <p>Conception de bases de données</p>
                     <p>Avec MariaDB & Microsoft SQL Server</p>
                 </div>
             </div>
-            <div class="skills-item">
+            <div class="skills-item fade-up">
                 <img src="/img/skills/tux.png" alt="Tux, mascotte du système GNU/Linux"/>
                 <div class="skills-item-content">
                     <p>Administration de systèmes</p>
                     <p>Avec GNU/Linux & Microsoft Windows</p>
                 </div>
             </div>
-            <div class="skills-item">
+            <div class="skills-item fade-up">
                 <img src="/img/skills/docker.png" alt="Logo Docker"/>
                 <div class="skills-item-content">
                     <p>Culture DevOps</p>

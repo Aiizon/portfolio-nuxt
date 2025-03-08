@@ -1,12 +1,16 @@
 <script setup lang="ts">
 import SectionTitle from "~/components/SectionTitle.vue";
 // @todo: find a proper picture
+
+useScrollAnimation();
 </script>
 
 <template>
     <section id="about">
-        <SectionTitle title="Qui suis-je ?"/>
-        <div class="about-content">
+        <div class="fade-up">
+            <SectionTitle title="Qui suis-je ?"/>
+        </div>
+        <div class="about-content fade-up">
             <img class="about-picture" src="/img/about-picure.png" alt="Image d'illustration de ma page de présentation"/>
             <div class="about-content-items">
                 Je suis Killian Bonneau, développeur passionné par la création d'applications web modernes performantes.
@@ -20,7 +24,7 @@ import SectionTitle from "~/components/SectionTitle.vue";
                 Passionné par Linux, j'aime également découvrir de nouveaux outils et technologies pour améliorer mon workflow et mes compétences.
             </div>
         </div>
-        <div class="about-download">
+        <div class="about-download fade-up">
             Télécharger :
             <div class="about-download-links">
                 <a href="/https://drive.proton.me/urls/3K6ECJ67XW#KbE6lBiGDX0m" target="_blank" ref="noopener noreferrer">Mon CV</a>
