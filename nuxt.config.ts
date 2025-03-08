@@ -8,6 +8,34 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxt/image',
   ],
+  sitemap: {
+    enabled: true,
+    autoLastmod: true,
+    minify: true,
+    defaults: {
+      changefreq: 'weekly',
+      priority: 0.8,
+      lastmod: new Date(),
+    },
+    urls: [
+      {
+        loc: '/',
+        changefreq: 'monthly',
+        priority: 1.0,
+        lastmod: new Date(),
+      },
+      {
+          loc: '/legal',
+          changefreq: 'monthly',
+          priority: 0.7,
+          lastmod: new Date(),
+      }
+    ],
+    exclude: [
+        '/404',
+    ],
+    autoI18n: true,
+  },
   content: {
     database: {
       type: 'sqlite',
