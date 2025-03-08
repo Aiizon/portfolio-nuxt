@@ -42,3 +42,11 @@ body {
 * {
   transition: background-color 0.3s linear, color 0.3s linear;
 }
+
+a {
+  transition: background-color 0.3s linear, color 0.3s linear, filter 0.3s linear;
+
+  &:hover {
+      filter: brightness(1.08);
+  }
+}

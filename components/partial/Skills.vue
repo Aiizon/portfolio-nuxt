@@ -74,6 +74,7 @@ import SectionTitle from "~/components/SectionTitle.vue";
             flex-direction: row;
             justify-content: space-around;
             align-items: center;
+            height: 80px;
             gap: 2rem;
             padding: 1rem;
             border-radius: 20px;

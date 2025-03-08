@@ -48,6 +48,12 @@ const { data: projects } = await useAsyncData('projects', () => {
             width: 20%;
             background-color: var(--primary-color);
             border-radius: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s linear, color 0.3s linear;
+
+            &:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            }
 
             img {
                 width: 100%;
@@ -70,7 +76,7 @@ const { data: projects } = await useAsyncData('projects', () => {
                 font-family: "Inter", sans-serif;
 
                 * {
-                    margin: 0 0 0 1rem;
+                    margin: 0 1rem 0 1rem;
                     color: var(--font-color);
                 }
 
@@ -83,10 +89,27 @@ const { data: projects } = await useAsyncData('projects', () => {
                 }
 
                 a {
-                    margin-top: 1rem;
+                    position: relative;
+                    overflow: hidden;
+                    transform-origin: center;
+                    align-self: center;
+                    padding: 1rem;
+                    background-color: var(--accent-dark);
+                    border-radius: 20px;
+                    color: var(--font-light);
+                    text-decoration: none;
                     font-size: var(--text-medium);
-                    text-decoration: underline;
-                    cursor: pointer;
+                    font-family: "Inter", sans-serif;
+
+                    &:hover {
+                        animation: pulse 1s infinite;
+                    }
+
+                    @keyframes pulse {
+                        0% { transform: scale(1); }
+                        50% { transform: scale(1.05); }
+                        100% { transform: scale(1); }
+                    }
                 }
             }
         }
