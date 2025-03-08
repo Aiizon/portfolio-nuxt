@@ -20,7 +20,7 @@ const { data: techWatchItems } = await useAsyncData('techWatch', async () => {
         <SectionTitle title="Mes sources" />
         <div class="tech-watch-items">
             <div v-for="item in techWatchItems" :key="item.id" class="tech-watch-item">
-                <img :src="String(item.meta.banner)" :alt="item.seo.title" :data-fill="item.meta.bannerFill" />
+                <img :src="String(item.meta.banner)" :alt="item.seo.title" :data-fill="item.meta.bannerFill" loading="lazy" />
                 <div class="tech-watch-item-content">
                     <h2>{{ item.seo.title }}</h2>
                     <p>{{ item.seo.description }}</p>
@@ -44,7 +44,7 @@ const { data: techWatchItems } = await useAsyncData('techWatch', async () => {
     justify-content: space-evenly;
     align-items: center;
     min-height: 90vh;
-    padding-top: 8vh;
+    padding-top: 10vh;
     background-color: var(--secondary-color);
 
     .tech-watch-intro {
@@ -84,6 +84,12 @@ const { data: techWatchItems } = await useAsyncData('techWatch', async () => {
             height: 400px;
             background-color: var(--primary-color);
             border-radius: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s linear, color 0.3s linear;
+
+            &:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            }
 
             img {
                 display: block;
@@ -104,6 +110,24 @@ const { data: techWatchItems } = await useAsyncData('techWatch', async () => {
 
                 &[data-fill="contain"] {
                     object-fit: contain;
+                }
+            }
+
+            a {
+                overflow: hidden;
+                transform-origin: center;
+                font-size: var(--text-medium);
+                text-decoration: underline;
+                cursor: pointer;
+
+                &:hover {
+                    animation: pulse 1s infinite;
+                }
+
+                @keyframes pulse {
+                    0% { transform: scale(1); }
+                    50% { transform: scale(1.05); }
+                    100% { transform: scale(1); }
                 }
             }
 
@@ -130,13 +154,6 @@ const { data: techWatchItems } = await useAsyncData('techWatch', async () => {
                 p {
                     font-size: var(--text-medium);
                     text-align: justify;
-                }
-
-                a {
-                    margin-top: 1rem;
-                    font-size: var(--text-medium);
-                    text-decoration: underline;
-                    cursor: pointer;
                 }
             }
 

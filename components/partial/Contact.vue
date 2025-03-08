@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import emailJS from '@emailjs/browser';
-import { Ref, ref, onMounted } from 'vue';
+import { type Ref, ref, onMounted } from 'vue';
 import SectionTitle from "~/components/SectionTitle.vue";
+import emailJS from '@emailjs/browser';
 
 type TemplateParams = {
     user_firstname: string;
@@ -48,12 +48,16 @@ async function sendEmail() {
         site_url: window.location.origin
     };
 }
+
+useScrollAnimation();
 </script>
 
 <template>
     <section id="contact">
-        <SectionTitle title="Me contacter"/>
-        <form class="contact-form" @submit.prevent="sendEmail">
+        <div class="fade-up">
+            <SectionTitle title="Me contacter"/>
+        </div>
+        <form class="contact-form fade-up" @submit.prevent="sendEmail">
             <div class="contact-form-item">
                 <label for="user_firstname">Prénom</label>
                 <input type="text" v-model="contact.user_firstname" placeholder="Prénom" required>
