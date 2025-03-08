@@ -1,6 +1,11 @@
 <script setup lang="ts">
 import SectionTitle from "~/components/SectionTitle.vue";
 
+useSeoMeta({
+    title: 'Mes projets',
+    description: 'Découvrez les projets que j\'ai réalisés, en cours ou terminés',
+});
+
 const { data: projects } = await useAsyncData('projects', () => {
     return queryCollection('projects').all();
 });
@@ -11,7 +16,7 @@ const { data: projects } = await useAsyncData('projects', () => {
         <SectionTitle title="Mes projets"/>
         <div class="projects-items">
             <div v-for="project in projects" :key="project.id" class="projects-item">
-                <img :src="String(project.meta.smallImage)" :alt="project.seo.title"/>
+                <img :src="String(project.meta.smallImage)" :alt="project.seo.title" loading="lazy"/>
                 <div class="projects-item-content">
                     <h2>{{ project.seo.title }}</h2>
                     <p>{{ project.meta.shortDescription }}</p>

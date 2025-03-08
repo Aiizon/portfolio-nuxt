@@ -4,6 +4,11 @@ const slug: string = route.params.slug as string;
 
 import '~/assets/styles/projects.scss';
 
+useSeoMeta({
+    title: () => project.value?.seo.title || 'Projet introuvable',
+    description: () => project.value?.seo.description || 'Le projet que vous cherchez n\'existe pas',
+});
+
 const { data: project } = await useAsyncData(slug, async () => {
     return await queryCollection('projects')
         .path(`/projects/${slug}`)
@@ -21,7 +26,7 @@ onMounted(() => {
 <template>
     <main id="project" v-if="project">
         <div class="project-banner">
-            <img :src="String(project.meta.bannerImage)" :alt="project.seo.title"/>
+            <img :src="String(project.meta.bannerImage)" :alt="project.seo.title" loading="lazy"/>
             <SectionTitle :title="project.seo.title"/>
         </div>
         <div class="project-content">

@@ -11,7 +11,7 @@ useScrollAnimation();
             <SectionTitle title="Qui suis-je ?"/>
         </div>
         <div class="about-content fade-up">
-            <img class="about-picture" src="/img/about-picure.png" alt="Image d'illustration de ma page de présentation"/>
+            <img class="about-picture" src="/img/about-picure.png" alt="Image d'illustration de ma page de présentation" loading="lazy"/>
             <div class="about-content-items">
                 Je suis Killian Bonneau, développeur passionné par la création d'applications web modernes performantes.
                 <br>

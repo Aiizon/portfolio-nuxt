@@ -5,7 +5,7 @@
 <template>
     <section id="home">
         <div class="home-content">
-            <img class="avatar" src="/img/avatar.jpg" alt="Avatar"/>
+            <img class="avatar" src="/img/avatar.jpg" alt="Avatar" loading="lazy"/>
             <div class="home-content-items">
                 <span>Bonjour ! Je m’appelle</span>
                 <span><h1>Killian Bonneau</h1></span>

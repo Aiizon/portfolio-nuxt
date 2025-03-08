@@ -4,7 +4,8 @@ export default defineNuxtConfig({
     enabled: true
   },
   modules: [
-    '@nuxt/content'
+    '@nuxtjs/sitemap',
+    '@nuxt/content',
   ],
   content: {
     database: {

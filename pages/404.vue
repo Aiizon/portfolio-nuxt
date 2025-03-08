@@ -4,7 +4,7 @@
 <template>
     <main id="not-found">
         <div class="not-found-logo">
-            <img src="/img/404.png" alt="Logo représentant l'erreur 404">
+            <img src="/img/404.png" alt="Logo représentant l'erreur 404" loading="lazy">
             <p>Crédits: SAWARATSUKI@<NuxtLink href="https://github.com/SAWARATSUKI/KawaiiLogos" ref="_blank" rel="noopener noreferrer">GitHub</NuxtLink></p>
         </div>
         <div class="not-found-content">

@@ -1,5 +1,10 @@
 <script setup lang="ts">
 import SectionTitle from "~/components/SectionTitle.vue";
+
+useSeoMeta({
+    title: 'Mentions Légales',
+    description: 'Mentions légales du portfolio de Killian Bonneau'
+});
 </script>
 
 <template>
