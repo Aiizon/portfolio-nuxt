@@ -28,7 +28,7 @@ const { data: projects } = await useAsyncData('projects', () => {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    min-height: 88vh;
+    min-height: 89vh;
     background-color: var(--secondary-color);
 
     .projects-items {

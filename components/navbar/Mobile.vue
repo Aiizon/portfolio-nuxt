@@ -15,7 +15,7 @@ const displayMenu: Ref<boolean> = ref(false);
             <a href="/#about" @click="displayMenu = !displayMenu">A propos</a>
             <a href="/#skills" @click="displayMenu = !displayMenu">Compétences</a>
             <a href="/projects" @click="displayMenu = !displayMenu">Projets</a>
-            <a href="/" @click="displayMenu = !displayMenu">Veille technologique</a>
+            <a href="/tech-watch" @click="displayMenu = !displayMenu">Veille technologique</a>
             <a href="/#contact" @click="displayMenu = !displayMenu">Contact</a>
         </div>
     </div>
@@ -103,8 +103,8 @@ const displayMenu: Ref<boolean> = ref(false);
 
     .avatar-small {
         display: block;
-        max-width: 40px;
-        max-height: 40px;
+        width: 40px;
+        height: 40px;
         border-radius: 999px;
         margin-left: 1rem;
     }
@@ -121,7 +121,7 @@ const displayMenu: Ref<boolean> = ref(false);
             font-optical-sizing: auto;
             font-weight: 500;
             font-style: normal;
-            color: var(--font-light);
+            color: var(--font-color);
         }
 
         .menu-button {
