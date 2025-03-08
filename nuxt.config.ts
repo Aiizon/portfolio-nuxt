@@ -6,6 +6,7 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/sitemap',
     '@nuxt/content',
+    '@nuxt/image',
   ],
   content: {
     database: {
@@ -25,6 +26,10 @@ export default defineNuxtConfig({
         }
       }
     }
+  },
+  image: {
+    quality: 80,
+    formats: ['webp', 'png', 'jpeg'],
   },
   app: {
     head: {
