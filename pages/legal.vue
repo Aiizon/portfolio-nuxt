@@ -68,6 +68,7 @@ import SectionTitle from "~/components/SectionTitle.vue";
             p {
                 margin-bottom: 0.5rem;
                 line-height: 1.6;
+                text-align: justify;
             }
 
             a {
