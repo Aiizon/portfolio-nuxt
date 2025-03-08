@@ -2,10 +2,10 @@
 </script>
 
 <template>
-    <PartialsHome/>
-    <PartialsAbout/>
-    <PartialsSkills/>
-    <PartialsContact/>
+    <PartialHome/>
+    <PartialAbout/>
+    <PartialSkills/>
+    <PartialContact/>
 </template>
 
 <style scoped lang="scss">
