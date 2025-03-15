@@ -1,8 +1,32 @@
 <script setup lang="ts">
 import SectionTitle from "~/components/SectionTitle.vue";
+import PasswordModal from "~/components/PasswordModal.vue";
 // @todo: find a proper picture
 
 useScrollAnimation();
+
+const showPasswordModal: Ref<boolean> = ref(false);
+const target:            Ref<string>  = ref('');
+
+function handleDownloadClick(url: string, event: Event) {
+    event.preventDefault();
+    target.value            = url;
+    showPasswordModal.value = true;
+}
+
+function closeModal() {
+    target.value            = '';
+    showPasswordModal.value = false;
+}
+
+function processDownload(url: string) {
+    if (url.startsWith('http')) {
+        window.open(url, '_blank');
+    } else {
+        target.value            = url;
+        showPasswordModal.value = true;
+    }
+}
 </script>
 
 <template>
@@ -27,10 +51,17 @@ useScrollAnimation();
         <div class="about-download fade-up">
             Télécharger :
             <div class="about-download-links">
-                <a href="https://drive.proton.me/urls/3K6ECJ67XW#KbE6lBiGDX0m" target="_blank" ref="noopener noreferrer">Mon CV</a>
-                <a href="/" download="">Mon tableau<br>pour l'E5</a>
+                <a href="https://drive.proton.me/urls/3K6ECJ67XW#KbE6lBiGDX0m" target="_blank" ref="noopener noreferrer">
+                    Mon CV
+                </a>
+                <a href="#" @click="(e: Event) => handleDownloadClick('https://drive.proton.me/urls/NS6CYJD490#JH6HRw7QaeuX', e)">
+                    Mon tableau
+                    <br>
+                    pour l'E5
+                </a>
             </div>
         </div>
+        <PasswordModal :open="showPasswordModal" :target="target" :on-close="closeModal" @download="processDownload"/>
     </section>
 </template>
 
@@ -111,10 +142,10 @@ useScrollAnimation();
                 font-weight: 500;
                 margin: 0 1rem;
                 transition: filter 0.3s linear;
-            }
 
-            a:hover {
-                filter: brightness(1.3);
+                &:hover {
+                    filter: brightness(1.3);
+                }
             }
         }
     }
