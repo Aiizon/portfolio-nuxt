@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import SectionTitle from "~/components/SectionTitle.vue";
 import PasswordModal from "~/components/PasswordModal.vue";
-// @todo: find a proper picture
 
 useScrollAnimation();
 
@@ -35,7 +34,7 @@ function processDownload(url: string) {
             <SectionTitle title="Qui suis-je ?"/>
         </div>
         <div class="about-content fade-up">
-            <img class="about-picture" src="/img/about-picure.png" alt="Image d'illustration de ma page de présentation" loading="lazy"/>
+            <img class="about-picture" src="/img/about-picture.png" alt="Image d'illustration de ma page de présentation" loading="lazy"/>
             <div class="about-content-items">
                 Je suis Killian Bonneau, développeur passionné par la création d'applications web modernes performantes.
                 <br>
