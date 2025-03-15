@@ -20,6 +20,7 @@ const contact: Ref<TemplateParams> = ref(
         site_url: ''
     } as TemplateParams
 );
+const isLoading: Ref<boolean> = ref(false);
 
 onMounted(() => {
     contact.value.site_url = window.location.origin;
@@ -34,11 +35,13 @@ async function sendEmail() {
         ...contact.value
     };
 
+    isLoading.value = true;
     await emailJS.send(
         import.meta.env.VITE_EMAILJS_SERVICEID,
         import.meta.env.VITE_EMAILJS_TEMPLATEID,
         templateParams
     );
+    isLoading.value = false;
 
     contact.value = {
         user_firstname: '',
@@ -74,7 +77,7 @@ useScrollAnimation();
                 <label for="message">Message</label>
                 <textarea v-model="contact.message" placeholder="Message" required></textarea>
             </div>
-            <button type="submit">Envoyer</button>
+            <button type="submit" :class="{'loading': isLoading}" :disabled="isLoading">Envoyer</button>
         </form>
     </section>
 </template>
@@ -124,7 +127,7 @@ useScrollAnimation();
                 border: none;
                 border-radius: 10px;
                 background-color: #fff;
-                color: var(--accent-font);
+                color: var(--font-dark);
                 font-family: "Inter", sans-serif;
                 font-weight: 400;
                 line-height: 1.5;
@@ -147,6 +150,11 @@ useScrollAnimation();
             line-height: 1.5;
             cursor: pointer;
             transition: filter 0.3s linear;
+
+            &.loading {
+                filter: brightness(160%);
+                cursor: not-allowed;
+            }
         }
 
         button:hover {

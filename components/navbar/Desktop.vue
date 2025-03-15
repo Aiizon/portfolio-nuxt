@@ -81,6 +81,11 @@ const isProjectRoute = computed(() => route.name === 'project-slug');
                 font-style: normal;
                 text-decoration: none;
                 color: var(--font-color);
+                cursor: pointer;
+
+                &:hover {
+                    text-decoration: underline;
+                }
             }
         }
 

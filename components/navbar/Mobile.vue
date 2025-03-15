@@ -84,6 +84,11 @@ const displayMenu: Ref<boolean> = ref(false);
             font-style: normal;
             text-decoration: none;
             color: var(--font-color);
+            cursor: pointer;
+
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
 }

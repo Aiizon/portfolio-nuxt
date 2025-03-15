@@ -4,17 +4,18 @@ const slug: string = route.params.slug as string;
 
 import '~/assets/styles/projects.scss';
 
-useSeoMeta({
-    title: () => project.value?.seo.title || 'Projet introuvable',
-    description: () => project.value?.seo.description || 'Le projet que vous cherchez n\'existe pas',
-});
-
 const { data: project } = await useAsyncData(slug, async () => {
     return await queryCollection('projects')
         .path(`/projects/${slug}`)
         .first()
     ;
 });
+
+useSeoMeta({
+    title:       () => project.value?.seo.title       || 'Projet introuvable',
+    description: () => project.value?.seo.description || 'Le projet que vous cherchez n\'existe pas',
+});
+
 
 onMounted(() => {
     if (project.value === null) {
