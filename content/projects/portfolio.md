@@ -7,7 +7,7 @@ description: Ce portfolio présente mes compétences et projets en développemen
 bannerImage: /img/projects/portfolio-banner.jpg
 smallImage: /img/projects/portfolio-small.jpg
 repositoryLink: https://github.com/Aiizon/portfolio
-demoLink: https://portfolio.example.com
+demoLink: https://www.kbonneau.fr
 tags: ["Nuxt", "TypeScript", "SCSS"]
 createdAt: "2025-02-15"
 ---
