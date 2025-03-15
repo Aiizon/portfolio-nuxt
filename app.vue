@@ -8,10 +8,11 @@ import '~/assets/styles/global.scss';
 declare module 'vue' {
     interface ImportMeta {
         readonly env: {
-            readonly VITE_EMAILJS_PUBKEY:     string;
-            readonly VITE_EMAILJS_SERVICEID:  string;
-            readonly VITE_EMAILJS_TEMPLATEID: string;
-            readonly VITE_MOBILE_BREAKPOINT:  string;
+            readonly VITE_EMAILJS_PUBKEY:            string;
+            readonly VITE_EMAILJS_SERVICEID:         string;
+            readonly VITE_EMAILJS_TEMPLATEID:        string;
+            readonly VITE_MOBILE_BREAKPOINT:         string;
+            readonly VITE_PUBLIC_DOWNLOAD_PASSWORDS: string;
         }
     }
 }
