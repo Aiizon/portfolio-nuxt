@@ -27,7 +27,12 @@ onMounted(() => {
 <template>
     <main id="project" v-if="project">
         <div class="project-banner">
-            <img :src="String(project.meta.bannerImage)" :alt="project.seo.title" loading="lazy"/>
+            <NuxtImg
+                :src="String(project.meta.bannerImage)"
+                :alt="project.seo.title"
+                loading="lazy"
+                formats="webp"
+            />
             <SectionTitle :title="project.seo.title"/>
         </div>
         <div class="project-content">

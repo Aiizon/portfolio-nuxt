@@ -830,7 +830,7 @@
     which "^3.0.1"
     ws "^8.18.0"
 
-"@nuxt/image@1.9.0":
+"@nuxt/image@^1.9.0":
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/@nuxt/image/-/image-1.9.0.tgz#3692cf6ab533e1b173a81bdefcdf5a9f5ceeda09"
   integrity sha512-kuuePx/jtlmsuG/G8mTMELntw4p8MLD4tu9f4A064xor/ks29oEoBmFRzvfFwxqZ7cqfG2M4LZfTZFjQz5St+Q==

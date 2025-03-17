@@ -20,7 +20,14 @@ const { data: techWatchItems } = await useAsyncData('techWatch', async () => {
         <SectionTitle title="Mes sources" />
         <div class="tech-watch-items">
             <div v-for="item in techWatchItems" :key="item.id" class="tech-watch-item">
-                <img :src="String(item.meta.banner)" :alt="item.seo.title" :data-fill="item.meta.bannerFill" loading="lazy" />
+                <NuxtImg
+                    :src="String(item.meta.banner)"
+                    :alt="item.seo.title"
+                    :data-fill="item.meta.bannerFill"
+                    loading="lazy"
+                    formats="webp"
+                    sizes="sm:300px 75vw"
+                />
                 <div class="tech-watch-item-content">
                     <h2>{{ item.seo.title }}</h2>
                     <p>{{ item.seo.description }}</p>

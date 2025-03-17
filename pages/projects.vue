@@ -16,7 +16,13 @@ const { data: projects } = await useAsyncData('projects', () => {
         <SectionTitle title="Mes projets"/>
         <div class="projects-items">
             <div v-for="project in projects" :key="project.id" class="projects-item">
-                <img :src="String(project.meta.smallImage)" :alt="project.seo.title" loading="lazy"/>
+                <NuxtImg
+                    :src="String(project.meta.smallImage)"
+                    :alt="project.seo.title"
+                    format="webp"
+                    loading="lazy"
+                    sizes="sm:75vw 20vw"
+                />
                 <div class="projects-item-content">
                     <h2>{{ project.seo.title }}</h2>
                     <p>{{ project.meta.shortDescription }}</p>

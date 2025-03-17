@@ -7,7 +7,14 @@ const isProjectRoute = computed(() => route.name === 'project-slug');
 
 <template>
     <div class="navbar-container" :class="{ 'project-page': isProjectRoute }">
-        <img class="avatar-small" src="/img/avatar.jpg" alt="Avatar">
+        <NuxtImg
+            class="avatar-small"
+            src="/img/avatar.jpg"
+            alt="Avatar"
+            loading="lazy"
+            formats="webp"
+            sizes="40px"
+        />
         <div class="navbar-items">
             <div class="menu-items">
                 <NuxtLink to="/#home">Accueil</NuxtLink>

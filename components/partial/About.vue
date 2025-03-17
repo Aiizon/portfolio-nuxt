@@ -34,7 +34,13 @@ function processDownload(url: string) {
             <SectionTitle title="Qui suis-je ?"/>
         </div>
         <div class="about-content fade-up">
-            <img class="about-picture" src="/img/about-picture.png" alt="Image d'illustration de ma page de présentation" loading="lazy"/>
+            <NuxtImg
+                class="about-picture"
+                src="/img/about-picture.png"
+                alt="Image d'illustration de ma page de présentation"
+                loading="lazy"
+                formats="webp"
+            />
             <div class="about-content-items">
                 Je suis Killian Bonneau, développeur passionné par la création d'applications web modernes performantes.
                 <br>
