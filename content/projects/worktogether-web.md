@@ -7,7 +7,7 @@ description: Une plateforme en ligne pour commander des unités dans des baies d
 bannerImage: /img/projects/wt-web-banner.jpg
 smallImage: /img/projects/wt-web-small.png
 repositoryLink: https://github.com/Aiizon/wt-web
-demoLink: https://wt-web.example.com
+demoLink: null
 tags: ["Symfony", "TypeScript", "MySQL", "MongoDB"]
 createdAt: "2024-10-20"
 ---
