@@ -18,7 +18,7 @@ useSeoMeta({
                     Contact :
                     <NuxtLink class="contact-info" id="contact-email" href="mailto:killian.bonneau@iia-formation.fr">killian.bonneau@iia-formation.fr</NuxtLink>
                 </p>
-                <p>Hébergeur : Infomaniak, dont le siège social est situé au 25 Rue Eugène-Marziano, 1227 Genève, Suisse</p>
+                <p>Hébergeur : DigitalOcean, dont le siège social est situé au 101 6th Avenue, New York, NY, 10013</p>
             </div>
 
             <div class="legal-section">
