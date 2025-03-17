@@ -19,6 +19,7 @@ footer {
     padding: 1rem 0;
     background-color: var(--accent-dark);
     color: white;
+    font-family: "Inter", sans-serif;
     font-size: 0.8rem;
     margin-top: auto;
 }
