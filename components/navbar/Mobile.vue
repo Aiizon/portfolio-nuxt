@@ -20,7 +20,14 @@ const displayMenu: Ref<boolean> = ref(false);
         </div>
     </div>
     <div v-show="!displayMenu" class="navbar-container">
-        <img class="avatar-small" src="/img/avatar.jpg" alt="Avatar">
+        <NuxtImg
+            class="avatar-small"
+            src="/img/avatar.jpg"
+            alt="Avatar"
+            loading="lazy"
+            formats="webp"
+            sizes="40px"
+        />
         <div class="navbar-items">
             <span class="theme-span">Thème :</span>
             <ThemeSwitch/>

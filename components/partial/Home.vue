@@ -5,7 +5,14 @@
 <template>
     <section id="home">
         <div class="home-content">
-            <img class="avatar" src="/img/avatar.jpg" alt="Avatar" loading="lazy"/>
+            <NuxtImg
+                class="avatar"
+                src="/img/avatar.jpg"
+                alt="Avatar"
+                loading="lazy"
+                formats="webp"
+                sizes="sm:400px 256px"
+            />
             <div class="home-content-items">
                 <span>Bonjour ! Je m’appelle</span>
                 <span><h1>Killian Bonneau</h1></span>
