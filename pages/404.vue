@@ -22,7 +22,7 @@
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    height: 88vh;
+    height: 89vh;
     width: 100%;
     background-color: var(--secondary-color);
 

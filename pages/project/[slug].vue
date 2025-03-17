@@ -34,7 +34,7 @@ onMounted(() => {
             <ContentRenderer :value="project.body" class="project-body"/>
             <div class="project-links">
                 <a v-if="project.meta.repositoryLink" :href="String(project.meta.repositoryLink)" target="_blank" rel="noopener noreferrer">Voir le projet</a>
-                <a v-if="project.meta.demoLink" :href="String(project.meta.demoLink)" target="_blank" rel="noopener noreferrer">Voir la démo</a>
+                <a v-if="project.meta.demoLink && project.meta.demoLink !== 'null'" :href="String(project.meta.demoLink)" target="_blank" rel="noopener noreferrer">Voir la démo</a>
             </div>
         </div>
         <NuxtLink class="return" to="/projects">Retour aux projets</NuxtLink>

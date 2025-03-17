@@ -7,7 +7,7 @@ description: Une plateforme en ligne pour louer des véhicules sur de courtes du
 bannerImage: /img/projects/slv-banner.jpg
 smallImage: /img/projects/slv-small.jpg
 repositoryLink: https://github.com/Aiizon/slv
-demoLink: https://slv.example.com
+demoLink: null
 tags: ["Symfony", "TypeScript", "MySQL", "MongoDB"]
 createdAt: "2024-10-22"
 ---
