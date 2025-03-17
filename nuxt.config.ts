@@ -69,6 +69,11 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
+      htmlAttrs: {
+        lang: 'fr'
+      },
+      charset: 'utf-8',
+      viewport: 'width=device-width, initial-scale=1',
       script: [
         {
           innerHTML: `
@@ -79,7 +84,7 @@ export default defineNuxtConfig({
             })();
           `,
           type: 'text/javascript',
-          tagPosition: 'bodyOpen'
+          tagPosition: 'bodyOpen',
         }
       ]
     }
