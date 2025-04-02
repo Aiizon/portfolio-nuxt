@@ -59,7 +59,7 @@ function processDownload(url: string) {
                 <a href="https://drive.proton.me/urls/3K6ECJ67XW#KbE6lBiGDX0m" target="_blank" ref="noopener noreferrer">
                     Mon CV
                 </a>
-                <a href="#" @click="(e: Event) => handleDownloadClick('https://drive.proton.me/urls/NS6CYJD490#JH6HRw7QaeuX', e)">
+                <a href="#" @click="(e: Event) => handleDownloadClick('https://drive.proton.me/urls/VKQAX7MW4R#1Jy033r4buq1', e)">
                     Mon tableau
                     <br>
                     pour l'E5
