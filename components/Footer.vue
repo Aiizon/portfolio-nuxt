@@ -5,7 +5,7 @@
 <template>
     <footer>
         <p>Fait avec ❤️ avec <NuxtLink to="https://vuejs.org/">Vue.js</NuxtLink> & <NuxtLink to="https://nuxt.com">Nuxt</NuxtLink></p>
-        <p>&copy; 2024-2025 - Killian Bonneau - <NuxtLink to="/legal">Mentions légales</NuxtLink></p>
+        <p>&copy; 2024-2025 - Killian Bonneau - <NuxtLink to="/pages/mentions-legales">Mentions légales</NuxtLink></p>
     </footer>
 </template>
 

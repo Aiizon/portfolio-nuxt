@@ -25,9 +25,9 @@ export default defineNuxtConfig({
         lastmod: new Date(),
       },
       {
-          loc: '/legal',
+          loc: '/mentions-legales',
           changefreq: 'monthly',
-          priority: 0.7,
+          priority: 0.6,
           lastmod: new Date(),
       }
     ],

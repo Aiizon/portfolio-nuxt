@@ -42,7 +42,7 @@ onMounted(() => {
                 <a v-if="project.meta.demoLink && project.meta.demoLink !== 'null'" :href="String(project.meta.demoLink)" target="_blank" rel="noopener noreferrer">Voir la démo</a>
             </div>
         </div>
-        <NuxtLink class="return" to="/projects">Retour aux projets</NuxtLink>
+        <NuxtLink class="return" to="/pages/projets">Retour aux projets</NuxtLink>
     </main>
 </template>
 

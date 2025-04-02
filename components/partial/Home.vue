@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <section id="home">
+    <section id="accueil">
         <div class="home-content">
             <NuxtImg
                 class="avatar"
@@ -28,7 +28,7 @@
 </template>
 
 <style scoped lang="scss">
-#home {
+#accueil {
     display: flex;
     flex-direction: column;
     background-color: var(--primary-color);

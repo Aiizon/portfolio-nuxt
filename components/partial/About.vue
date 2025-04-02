@@ -29,7 +29,7 @@ function processDownload(url: string) {
 </script>
 
 <template>
-    <section id="about">
+    <section id="a-propos">
         <div class="fade-up">
             <SectionTitle title="Qui suis-je ?"/>
         </div>
@@ -71,7 +71,7 @@ function processDownload(url: string) {
 </template>
 
 <style scoped lang="scss">
-#about {
+#a-propos {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;

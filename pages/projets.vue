@@ -26,7 +26,7 @@ const { data: projects } = await useAsyncData('projects', () => {
                 <div class="projects-item-content">
                     <h2>{{ project.seo.title }}</h2>
                     <p>{{ project.meta.shortDescription }}</p>
-                    <NuxtLink :to="`project/${String(project.meta.slug)}`">En savoir plus</NuxtLink>
+                    <NuxtLink :to="`projet/${String(project.meta.slug)}`">En savoir plus</NuxtLink>
                 </div>
             </div>
         </div>
