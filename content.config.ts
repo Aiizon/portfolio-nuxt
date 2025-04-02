@@ -22,6 +22,10 @@ export default defineContentConfig({
             type: 'page',
             source: 'projects/*.md'
         }),
+        internships: defineCollection({
+            type: 'page',
+            source: 'internships/*.md'
+        }),
         techWatch: defineCollection({
             type: 'page',
             source: "tech-watch/*.md"

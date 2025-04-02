@@ -2,47 +2,45 @@
 const route = useRoute();
 const slug: string = route.params.slug as string;
 
-import '~/assets/styles/projects.scss';
+import '~/assets/styles/internships.scss';
 
-const { data: project } = await useAsyncData(slug, async () => {
-    return await queryCollection('projects')
-        .path(`/projects/${slug}`)
+const { data: internship } = await useAsyncData(slug, async () => {
+    return await queryCollection('internships')
+        .path(`/internships/${slug}`)
         .first()
     ;
 });
 
 useSeoMeta({
-    title:       () => project.value?.seo.title       || 'Projet introuvable',
-    description: () => project.value?.seo.description || 'Le projet que vous cherchez n\'existe pas',
+    title:       () => internship.value?.seo.title       || 'Stage introuvable',
+    description: () => internship.value?.seo.description || 'Le stage que vous cherchez n\'existe pas',
 });
 
 
 onMounted(() => {
-    if (project.value === null) {
+    console.log(route.params);
+    console.log(internship.value, slug);
+    if (internship.value === null) {
         navigateTo('/404');
     }
 });
 </script>
 
 <template>
-    <main id="internships" v-if="project">
+    <main id="internships" v-if="internship">
         <div class="internship-banner">
             <NuxtImg
-                :src="String(project.meta.bannerImage)"
-                :alt="project.seo.title"
+                :src="String(internship.meta.bannerImage)"
+                :alt="internship.seo.title"
                 loading="lazy"
                 formats="webp"
             />
-            <SectionTitle :title="project.seo.title"/>
+            <SectionTitle :title="internship.seo.title"/>
         </div>
         <div class="internship-content">
-            <ContentRenderer :value="project.body" class="internship-body"/>
-            <div class="project-links">
-                <a v-if="project.meta.repositoryLink" :href="String(project.meta.repositoryLink)" target="_blank" rel="noopener noreferrer">Voir le projet</a>
-                <a v-if="project.meta.demoLink && project.meta.demoLink !== 'null'" :href="String(project.meta.demoLink)" target="_blank" rel="noopener noreferrer">Voir la démo</a>
-            </div>
+            <ContentRenderer :value="internship.body" class="internship-body"/>
         </div>
-        <NuxtLink class="return" to="/projets">Retour aux projets</NuxtLink>
+        <NuxtLink class="return" to="/stages">Retour aux projets</NuxtLink>
     </main>
 </template>
 
