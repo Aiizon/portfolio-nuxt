@@ -11,13 +11,13 @@ const displayMenu: Ref<boolean> = ref(false);
             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6.99486 7.00636C6.60433 7.39689 6.60433 8.03005 6.99486 8.42058L10.58 12.0057L6.99486 15.5909C6.60433 15.9814 6.60433 16.6146 6.99486 17.0051C7.38538 17.3956 8.01855 17.3956 8.40907 17.0051L11.9942 13.4199L15.5794 17.0051C15.9699 17.3956 16.6031 17.3956 16.9936 17.0051C17.3841 16.6146 17.3841 15.9814 16.9936 15.5909L13.4084 12.0057L16.9936 8.42059C17.3841 8.03007 17.3841 7.3969 16.9936 7.00638C16.603 6.61585 15.9699 6.61585 15.5794 7.00638L11.9942 10.5915L8.40907 7.00636C8.01855 6.61584 7.38538 6.61584 6.99486 7.00636Z" fill="#E5E5E5"></path> </g></svg>
         </div>
         <div class="menu-items">
-            <a href="/#home"        @click="displayMenu = !displayMenu">Accueil</a>
-            <a href="/#about"       @click="displayMenu = !displayMenu">A propos</a>
-            <a href="/#skills"      @click="displayMenu = !displayMenu">Compétences</a>
-            <a href="/#projetcts"   @click="displayMenu = !displayMenu">Projets</a>
-            <a href="/#internships" @click="displayMenu = !displayMenu">Stages</a>
-            <a href="/veille"       @click="displayMenu = !displayMenu">Veille technologique</a>
-            <a href="/#contact"     @click="displayMenu = !displayMenu">Contact</a>
+            <a href="/#home"    @click="displayMenu = !displayMenu">Accueil</a>
+            <a href="/#about"   @click="displayMenu = !displayMenu">A propos</a>
+            <a href="/#skills"  @click="displayMenu = !displayMenu">Compétences</a>
+            <a href="/#projets" @click="displayMenu = !displayMenu">Projets</a>
+            <a href="/#stages"  @click="displayMenu = !displayMenu">Stages</a>
+            <a href="/veille"   @click="displayMenu = !displayMenu">Veille technologique</a>
+            <a href="/#contact" @click="displayMenu = !displayMenu">Contact</a>
         </div>
     </div>
     <div v-show="!displayMenu" class="navbar-container">

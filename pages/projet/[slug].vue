@@ -25,8 +25,8 @@ onMounted(() => {
 </script>
 
 <template>
-    <main id="internships" v-if="project">
-        <div class="internship-banner">
+    <main id="project" v-if="project">
+        <div class="project-banner">
             <NuxtImg
                 :src="String(project.meta.bannerImage)"
                 :alt="project.seo.title"
@@ -35,19 +35,20 @@ onMounted(() => {
             />
             <SectionTitle :title="project.seo.title"/>
         </div>
-        <div class="internship-content">
-            <ContentRenderer :value="project.body" class="internship-body"/>
+        <div class="project-content">
+            <p class="project-tags">Technologies utilisées : {{ project.meta.tags.join(', ') }}</p>
+            <ContentRenderer :value="project.body" class="project-body"/>
             <div class="project-links">
                 <a v-if="project.meta.repositoryLink" :href="String(project.meta.repositoryLink)" target="_blank" rel="noopener noreferrer">Voir le projet</a>
                 <a v-if="project.meta.demoLink && project.meta.demoLink !== 'null'" :href="String(project.meta.demoLink)" target="_blank" rel="noopener noreferrer">Voir la démo</a>
             </div>
         </div>
-        <NuxtLink class="return" to="/projets">Retour aux projets</NuxtLink>
+        <NuxtLink class="return" to="/#projets">Retour aux projets</NuxtLink>
     </main>
 </template>
 
 <style scoped lang="scss">
-#internships {
+#project {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -55,10 +56,10 @@ onMounted(() => {
     min-height: 100vh;
     background-color: var(--secondary-color);
 
-    .internship-banner {
+    .project-banner {
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: center;
         align-items: center;
         width: 100%;
 
@@ -79,7 +80,7 @@ onMounted(() => {
         }
     }
 
-    .internship-content {
+    .project-content {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
@@ -95,6 +96,12 @@ onMounted(() => {
 
         p {
             margin: 1rem 0;
+        }
+        
+        .project-tags {
+            font-size: var(--text-medium);
+            font-weight: 500;
+            color: var(--font-color);
         }
 
         .project-links {
@@ -139,7 +146,7 @@ onMounted(() => {
     }
 
     @media (max-width: 768px) {
-        .internship-banner {
+        .project-banner {
             img {
                 width: fit-content;
                 aspect-ratio: 81;
@@ -153,7 +160,7 @@ onMounted(() => {
             }
         }
 
-        .internship-content {
+        .project-content {
             width: 90%;
             padding: 1rem;
             margin-top: 1rem;
@@ -163,7 +170,7 @@ onMounted(() => {
                 margin: 0.5rem 0;
             }
 
-            .internship-body {
+            .project-body {
                 font-size: var(--text-small);
 
                 h1 {

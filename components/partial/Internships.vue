@@ -7,7 +7,7 @@ const { data: internships } = await useAsyncData('internships', () => {
 </script>
 
 <template>
-    <main id="internships">
+    <main id="stages">
         <div class="fade-up">
             <SectionTitle title="Mes stages"/>
         </div>
@@ -31,7 +31,7 @@ const { data: internships } = await useAsyncData('internships', () => {
 </template>
 
 <style scoped lang="scss">
-#internships {
+#stages {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;

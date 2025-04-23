@@ -7,7 +7,7 @@ const { data: projects } = await useAsyncData('projects', () => {
 </script>
 
 <template>
-    <main id="projects">
+    <main id="projets">
         <div class="fade-up">
             <SectionTitle title="Mes projets"/>
         </div>
@@ -23,6 +23,7 @@ const { data: projects } = await useAsyncData('projects', () => {
                 <div class="projects-item-content">
                     <h2>{{ project.seo.title }}</h2>
                     <p>{{ project.meta.shortDescription }}</p>
+                    <p>Technologies utilisées : {{ project.meta.tags.join(', ') }}</p>
                     <NuxtLink :to="`projet/${String(project.meta.slug)}`">En savoir plus</NuxtLink>
                 </div>
             </div>
@@ -31,7 +32,7 @@ const { data: projects } = await useAsyncData('projects', () => {
 </template>
 
 <style scoped lang="scss">
-#projects {
+#projets {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
