@@ -42,15 +42,25 @@ function processDownload(url: string) {
                 formats="webp"
             />
             <div class="about-content-items">
-                Je suis Killian Bonneau, développeur passionné par la création d'applications web modernes performantes.
+                <span>
+                    Je suis <b>Killian Bonneau</b>, développeur passionné par la création d'applications web modernes performantes.
+                </span>
                 <br>
-                Mon parcours dans le développement a débuté au lycée en 2021, et depuis, j'ai eu l'opportunité de travailler sur divers projets stimulants qui m'ont permis d'affiner mes compétences en PHP, Javascript ou encore en gestion de serveur.
+                <span>
+                    Mon parcours dans le développement a débuté au <b>lycée en 2021</b>, et depuis, j'ai eu l'opportunité de travailler sur divers projets stimulants qui m'ont permis d'affiner mes compétences en <b>PHP</b>, <b>Javascript</b> ou encore en <b>gestion de serveur</b>.
+                </span>
                 <br>
-                Actuellement en BTS SIO (option SLAM) à l'Institut d'Informatique Appliquée, je cherche constamment à approfondir mes connaissances et à relever de nouveaux défis techniques.
+                <span>
+                    Actuellement en <b>BTS SIO (option SLAM)</b> à l'<b>Institut d'Informatique Appliquée</b>, je cherche constamment à approfondir mes connaissances et à relever de nouveaux défis techniques.
+                </span>
                 <br>
-                Mon approche du développement est axée sur la création de solutions élégantes et maintenables, en privilégiant les bonnes pratiques et la qualité du code.
+                <span>
+                    Mon approche du développement est axée sur la création de solutions <b>élégantes et maintenables</b>, en privilégiant les <b>bonnes pratiques et la qualité du code</b>.
+                </span>
                 <br>
-                Passionné par Linux, j'aime également découvrir de nouveaux outils et technologies pour améliorer mon workflow et mes compétences.
+                <span>
+                    Passionné par <b>Linux</b>, j'aime également découvrir de <b>nouveaux outils et technologies</b> pour améliorer mon workflow et mes compétences.
+                </span>
             </div>
         </div>
         <div class="about-download fade-up">
@@ -94,19 +104,20 @@ function processDownload(url: string) {
         }
 
         .about-content-items {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
             text-align: justify;
             max-width: 40%;
             color: var(--font-color);
             font-family: "Inter", sans-serif;
             font-weight: 400;
             line-height: 1.5;
+            
+            span {
+                display: block;
+                margin: 0.4rem 0;
+            }
 
             br {
-                margin: 1rem 0;
+                margin: 0.4rem 0;
             }
         }
     }
