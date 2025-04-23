@@ -2,31 +2,31 @@
 import SectionTitle from "~/components/SectionTitle.vue";
 
 useSeoMeta({
-    title: 'Mes projets',
-    description: 'Découvrez les projets que j\'ai réalisés, en cours ou terminés',
+    title: 'Mes stages',
+    description: 'Découvrez mes stages et mes projets professionnels.',
 });
 
-const { data: projects } = await useAsyncData('projects', () => {
-    return queryCollection('projects').all();
+const { data: internships } = await useAsyncData('internships', () => {
+    return queryCollection('internships').all();
 });
 </script>
 
 <template>
-    <main id="projects">
-        <SectionTitle title="Mes projets"/>
+    <main id="internships">
+        <SectionTitle title="Mes stages"/>
         <div class="internships-items">
-            <div v-for="project in projects" :key="project.id" class="internships-item">
+            <div v-for="internship in internships" :key="internship.id" class="internships-item">
                 <NuxtImg
-                    :src="String(project.meta.smallImage)"
-                    :alt="project.seo.title"
+                    :src="String(internship.meta.smallImage)"
+                    :alt="internship.seo.title"
                     format="webp"
                     loading="lazy"
                     sizes="sm:75vw 20vw"
                 />
-                <div class="projects-item-content">
-                    <h2>{{ project.seo.title }}</h2>
-                    <p>{{ project.meta.shortDescription }}</p>
-                    <NuxtLink :to="`projet/${String(project.meta.slug)}`">En savoir plus</NuxtLink>
+                <div class="internships-item-content">
+                    <h2>{{ internship.seo.title }}</h2>
+                    <p>{{ internship.meta.shortDescription }}</p>
+                    <NuxtLink :to="`stage/${String(internship.meta.slug)}`">En savoir plus</NuxtLink>
                 </div>
             </div>
         </div>
@@ -34,7 +34,7 @@ const { data: projects } = await useAsyncData('projects', () => {
 </template>
 
 <style scoped lang="scss">
-#projects {
+#internships {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -75,7 +75,7 @@ const { data: projects } = await useAsyncData('projects', () => {
                 border-top-right-radius: 20px;
             }
 
-            .projects-item-content {
+            .internships-item-content {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-evenly;

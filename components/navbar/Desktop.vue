@@ -21,6 +21,7 @@ const isProjectRoute = computed(() => route.name === 'project-slug');
                 <NuxtLink to="/#a-propos">A propos</NuxtLink>
                 <NuxtLink to="/#competences">Compétences</NuxtLink>
                 <NuxtLink to="/projets">Projets</NuxtLink>
+                <NuxtLink to="/stages">Stages</NuxtLink>
                 <NuxtLink to="/veille">Veille technologique</NuxtLink>
                 <NuxtLink to="/#contact">Contact</NuxtLink>
             </div>
