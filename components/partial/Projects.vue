@@ -1,32 +1,29 @@
 <script setup lang="ts">
 import SectionTitle from "~/components/SectionTitle.vue";
 
-useSeoMeta({
-    title: 'Mes stages',
-    description: 'Découvrez mes stages et mes projets professionnels.',
-});
-
-const { data: internships } = await useAsyncData('internships', () => {
-    return queryCollection('internships').all();
+const { data: projects } = await useAsyncData('projects', () => {
+    return queryCollection('projects').all();
 });
 </script>
 
 <template>
-    <main id="internships">
-        <SectionTitle title="Mes stages"/>
-        <div class="internships-items">
-            <div v-for="internship in internships" :key="internship.id" class="internships-item">
+    <main id="projects">
+        <div class="fade-up">
+            <SectionTitle title="Mes projets"/>
+        </div>
+        <div class="internships-items fade-up">
+            <div v-for="project in projects" :key="project.id" class="internships-item">
                 <NuxtImg
-                    :src="String(internship.meta.smallImage)"
-                    :alt="internship.seo.title"
+                    :src="String(project.meta.smallImage)"
+                    :alt="project.seo.title"
                     format="webp"
                     loading="lazy"
                     sizes="sm:75vw 20vw"
                 />
-                <div class="internships-item-content">
-                    <h2>{{ internship.seo.title }}</h2>
-                    <p>{{ internship.meta.shortDescription }}</p>
-                    <NuxtLink :to="`stage/${String(internship.meta.slug)}`">En savoir plus</NuxtLink>
+                <div class="projects-item-content">
+                    <h2>{{ project.seo.title }}</h2>
+                    <p>{{ project.meta.shortDescription }}</p>
+                    <NuxtLink :to="`projet/${String(project.meta.slug)}`">En savoir plus</NuxtLink>
                 </div>
             </div>
         </div>
@@ -34,7 +31,7 @@ const { data: internships } = await useAsyncData('internships', () => {
 </template>
 
 <style scoped lang="scss">
-#internships {
+#projects {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -75,7 +72,7 @@ const { data: internships } = await useAsyncData('internships', () => {
                 border-top-right-radius: 20px;
             }
 
-            .internships-item-content {
+            .projects-item-content {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-evenly;
@@ -87,11 +84,13 @@ const { data: internships } = await useAsyncData('internships', () => {
                 font-family: "Inter", sans-serif;
 
                 * {
-                    margin: 0 1rem 0 1rem;
+                    margin: 0 1rem;
                     color: var(--font-color);
                 }
 
                 h2 {
+                    height: 4rem;
+                    vertical-align: center;
                     font-size: var(--text-large);
                 }
 

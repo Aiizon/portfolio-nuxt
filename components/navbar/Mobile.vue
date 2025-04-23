@@ -14,8 +14,8 @@ const displayMenu: Ref<boolean> = ref(false);
             <a href="/#home" @click="displayMenu = !displayMenu">Accueil</a>
             <a href="/#about" @click="displayMenu = !displayMenu">A propos</a>
             <a href="/#skills" @click="displayMenu = !displayMenu">Compétences</a>
-            <a href="/projets" @click="displayMenu = !displayMenu">Projets</a>
-            <a href="/stages" @click="displayMenu = !displayMenu">Stages</a>
+            <a href="/#projetcts" @click="displayMenu = !displayMenu">Projets</a>
+            <a href="/#internships" @click="displayMenu = !displayMenu">Stages</a>
             <a href="/veille" @click="displayMenu = !displayMenu">Veille technologique</a>
             <a href="/#contact" @click="displayMenu = !displayMenu">Contact</a>
         </div>
