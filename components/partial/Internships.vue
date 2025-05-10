@@ -95,6 +95,7 @@ const { data: internships } = await useAsyncData('internships', () => {
 
                 p {
                     font-size: var(--text-medium);
+                    text-align: justify;
                 }
 
                 a {

@@ -67,6 +67,13 @@ export default defineNuxtConfig({
       '2xl': 1536,
     }
   },
+  components: {
+    global: true,
+    dirs: [
+      '~/components',
+      '~/components/content',
+    ]
+  },
   app: {
     head: {
       htmlAttrs: {
