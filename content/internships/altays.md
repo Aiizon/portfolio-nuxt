@@ -2,12 +2,9 @@
 id: 1
 title: Altays
 slug: altays
-shortDescription: Portfolio personnel réalisé avec Nuxt 3 et TypeScript.
-description: Ce portfolio présente mes compétences et projets en développement web.
+shortDescription: Stage de première année en développement web
+description: Stage de première année en développement web au sein de l'entreprise Altays, spécialisée dans le développement d'une suite de gestion RH en SaSS.
 bannerImage: /img/projects/portfolio-banner.jpg
 smallImage: /img/projects/portfolio-small.jpg
-repositoryLink: https://github.com/Aiizon/portfolio
-tags: ["Nuxt", "TypeScript", "SCSS"]
-createdAt: "2024-04-22"
 ---
 

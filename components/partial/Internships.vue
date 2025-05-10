@@ -1,3 +1,4 @@
+<!--suppress HtmlUnknownTarget -->
 <script setup lang="ts">
 import SectionTitle from "~/components/SectionTitle.vue";
 

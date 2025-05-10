@@ -42,25 +42,27 @@ function processDownload(url: string) {
                 formats="webp"
             />
             <div class="about-content-items">
-                <span>
+                <p>
                     Je suis <b>Killian Bonneau</b>, développeur passionné par la création d'applications web modernes performantes.
-                </span>
+                </p>
                 <br>
-                <span>
-                    Mon parcours dans le développement a débuté au <b>lycée en 2021</b>, et depuis, j'ai eu l'opportunité de travailler sur divers projets stimulants qui m'ont permis d'affiner mes compétences en <b>PHP</b>, <b>Javascript</b> ou encore en <b>gestion de serveur</b>.
-                </span>
+                <p>
+                    Mon parcours dans le développement a débuté au <b>lycée en 2021</b>. J'y ai effectué un Baccalauréat général (mention bien) avec les options Physique-Chimie et <abbr title="Numérique et Sciences de l'Informatique">NSI</abbr>.
+                </p>
                 <br>
-                <span>
-                    Actuellement en <b>BTS SIO (option SLAM)</b> à l'<b>Institut d'Informatique Appliquée</b>, je cherche constamment à approfondir mes connaissances et à relever de nouveaux défis techniques.
-                </span>
+                <p>
+                    Actuellement en <b>BTS <abbr title="Service Informatique aux Organisations">SIO</abbr> (option <abbr title="Solution Logicielles et Applications Métier">SLAM</abbr> </b> à l'<b>Institut d'Informatique Appliquée</b>, je cherche constamment à approfondir mes connaissances et à relever de nouveaux défis techniques.
+                </p>
                 <br>
-                <span>
+                <p>
+                    Depuis, j'ai eu l'opportunité de travailler sur divers projets stimulants qui m'ont permis d'affiner mes compétences en <b>PHP</b>, <b>Javascript</b> ou encore en <b>gestion de serveur</b>.
+                </p>
+                <p>
                     Mon approche du développement est axée sur la création de solutions <b>élégantes et maintenables</b>, en privilégiant les <b>bonnes pratiques et la qualité du code</b>.
-                </span>
-                <br>
-                <span>
+                </p>
+                <p>
                     Passionné par <b>Linux</b>, j'aime également découvrir de <b>nouveaux outils et technologies</b> pour améliorer mon workflow et mes compétences.
-                </span>
+                </p>
             </div>
         </div>
         <div class="about-download fade-up">
@@ -111,7 +113,7 @@ function processDownload(url: string) {
             font-weight: 400;
             line-height: 1.5;
             
-            span {
+            p {
                 display: block;
                 margin: 0.4rem 0;
             }
