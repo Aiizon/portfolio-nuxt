@@ -29,6 +29,43 @@ export default defineNuxtConfig({
           changefreq: 'monthly',
           priority: 0.6,
           lastmod: new Date(),
+      },
+      {
+        loc: '/stage/altays',
+        changefreq: 'monthly',
+        priority: 0.8,
+        lastmod: new Date(),
+      },
+      {
+
+        loc: '/stage/ascadis',
+        changefreq: 'monthly',
+        priority: 0.8,
+        lastmod: new Date(),
+      },
+      {
+        loc: '/projet/portfolio',
+        changefreq: 'monthly',
+        priority: 0.7,
+        lastmod: new Date(),
+      },
+      {
+        loc: '/projet/slv',
+        changefreq: 'monthly',
+        priority: 0.7,
+        lastmod: new Date(),
+      },
+      {
+        loc: '/projet/worktogether-desktop',
+        changefreq: 'monthly',
+        priority: 0.7,
+        lastmod: new Date(),
+      },
+      {
+        loc: '/projet/worktogether-web',
+        changefreq: 'monthly',
+        priority: 0.7,
+        lastmod: new Date(),
       }
     ],
     exclude: [
