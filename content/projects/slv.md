@@ -29,3 +29,11 @@ Ce projet est une application web de location courte-durée de véhicules. Les u
 
 - Symfony
 - MySQL
+
+## Captures d'écran
+
+::ContentAccordion{title="Captures d'écran"}
+![1.png](/img/projects/slv/1.png)
+![2.png](/img/projects/slv/2.png)
+![3.png](/img/projects/slv/3.png)
+::

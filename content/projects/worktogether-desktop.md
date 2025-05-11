@@ -27,4 +27,15 @@ WorkTogether Desktop est une application de bureau conçue pour la gestion des r
 
 ## Technologies utilisées
 
-Cette application a été développée en C# avec le framework .NET. L'interface graphique a été réalisée avec AvaloniaUI et la librairie UI SukiUI. Les données sont stockées dans une base de données MySQL partagée avec la partie web de l'application (voir WorkTogether Web).
+Cette application a été développée en C# avec le framework .NET. L'interface graphique a été réalisée avec AvaloniaUI et la librairie UI SukiUI. 
+Les données sont stockées dans une base de données MySQL partagée avec la partie web de l'application (voir WorkTogether Web).
+
+## Captures d'écran
+
+::ContentAccordion{title="Captures d'écran"}
+![1.png](/img/projects/wt-desktop/1.png)
+![2.png](/img/projects/wt-desktop/2.png)
+![3.png](/img/projects/wt-desktop/3.png)
+![4.png](/img/projects/wt-desktop/4.png)
+![5.png](/img/projects/wt-desktop/5.png)
+::
