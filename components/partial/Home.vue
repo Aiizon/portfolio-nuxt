@@ -6,8 +6,8 @@
     <section id="accueil">
         <div class="home-content">
             <NuxtImg
-                class="avatar"
-                src="/img/avatar.jpg"
+                class="me"
+                src="/img/me.jpg"
                 alt="Avatar"
                 loading="lazy"
                 formats="webp"
@@ -81,10 +81,11 @@
             }
         }
 
-        .avatar {
+        .me {
             display: block;
-            max-width: 400px;
-            max-height: 400px;
+            object-fit: cover;
+            width: 500px;
+            height: 500px;
             border-radius: 80px;
         }
 
@@ -110,7 +111,7 @@
                 }
             }
 
-            .avatar {
+            .me {
                 max-width: 256px;
                 max-height: 256px;
             }
