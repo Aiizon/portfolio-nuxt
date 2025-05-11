@@ -40,7 +40,7 @@ onMounted(() => {
         <div class="internship-content">
             <ContentRenderer :value="internship.body" class="internship-body"/>
         </div>
-        <NuxtLink class="return" to="/#stages">Retour aux projets</NuxtLink>
+        <NuxtLink class="return" to="/#stages">Retour aux stages</NuxtLink>
     </main>
 </template>
 

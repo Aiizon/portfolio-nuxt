@@ -55,7 +55,7 @@ const toggle = () => {
         transition: max-height 0.5s ease-in-out;
         
         &.open {
-            max-height: 2000px;
+            max-height: 20000px;
             transition: max-height 0.5s ease-in-out;
         }
         
