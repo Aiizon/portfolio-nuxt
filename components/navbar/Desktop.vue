@@ -17,11 +17,12 @@ const isProjectRoute = computed(() => route.name === 'project-slug');
         />
         <div class="navbar-items">
             <div class="menu-items">
-                <NuxtLink to="/#home">Accueil</NuxtLink>
-                <NuxtLink to="/#about">A propos</NuxtLink>
-                <NuxtLink to="/#skills">Compétences</NuxtLink>
-                <NuxtLink to="/projects">Projets</NuxtLink>
-                <NuxtLink to="/tech-watch">Veille technologique</NuxtLink>
+                <NuxtLink to="/#accueil">Accueil</NuxtLink>
+                <NuxtLink to="/#a-propos">A propos</NuxtLink>
+                <NuxtLink to="/#competences">Compétences</NuxtLink>
+                <NuxtLink to="/#projets">Projets</NuxtLink>
+                <NuxtLink to="/#stages">Stages</NuxtLink>
+                <NuxtLink to="/veille">Veille technologique</NuxtLink>
                 <NuxtLink to="/#contact">Contact</NuxtLink>
             </div>
             <span class="theme-span">Thème :</span>

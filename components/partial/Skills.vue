@@ -5,7 +5,7 @@ useScrollAnimation();
 </script>
 
 <template>
-    <section id="skills">
+    <section id="competences">
         <div class="fade-up">
             <SectionTitle title="Mes compétences"/>
         </div>
@@ -93,7 +93,7 @@ useScrollAnimation();
 </template>
 
 <style scoped lang="scss">
-#skills {
+#competences {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;

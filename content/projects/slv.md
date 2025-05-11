@@ -4,8 +4,8 @@ title: Service de Location de Véhicules
 slug: slv
 shortDescription: Application web de location courte-durée de véhicules.
 description: Une plateforme en ligne pour louer des véhicules sur de courtes durées.
-bannerImage: /img/projects/slv-banner.jpg
-smallImage: /img/projects/slv-small.jpg
+bannerImage: /img/projects/slv/slv-banner.jpg
+smallImage: /img/projects/slv/slv-small.jpg
 repositoryLink: https://github.com/Aiizon/slv
 demoLink: null
 tags: ["Symfony", "TypeScript", "MySQL", "MongoDB"]
@@ -29,3 +29,11 @@ Ce projet est une application web de location courte-durée de véhicules. Les u
 
 - Symfony
 - MySQL
+
+## Captures d'écran
+
+::ContentAccordion{title="Captures d'écran"}
+![1.png](/img/projects/slv/1.png)
+![2.png](/img/projects/slv/2.png)
+![3.png](/img/projects/slv/3.png)
+::

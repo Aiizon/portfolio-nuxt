@@ -29,7 +29,7 @@ function processDownload(url: string) {
 </script>
 
 <template>
-    <section id="about">
+    <section id="a-propos">
         <div class="fade-up">
             <SectionTitle title="Qui suis-je ?"/>
         </div>
@@ -42,15 +42,27 @@ function processDownload(url: string) {
                 formats="webp"
             />
             <div class="about-content-items">
-                Je suis Killian Bonneau, développeur passionné par la création d'applications web modernes performantes.
+                <p>
+                    Je suis <b>Killian Bonneau</b>, développeur passionné par la création d'applications web modernes performantes.
+                </p>
                 <br>
-                Mon parcours dans le développement a débuté au lycée en 2021, et depuis, j'ai eu l'opportunité de travailler sur divers projets stimulants qui m'ont permis d'affiner mes compétences en PHP, Javascript ou encore en gestion de serveur.
+                <p>
+                    Mon parcours dans le développement a débuté au <b>lycée en 2021</b>. J'y ai effectué un Baccalauréat général (mention <b>bien</b>) avec les options <b>Physique-Chimie</b> et <b><abbr title="Numérique et Sciences de l'Informatique">NSI</abbr></b>.
+                </p>
                 <br>
-                Actuellement en BTS SIO (option SLAM) à l'Institut d'Informatique Appliquée, je cherche constamment à approfondir mes connaissances et à relever de nouveaux défis techniques.
+                <p>
+                    Actuellement en <b>BTS <abbr title="Service Informatique aux Organisations">SIO</abbr> (option <abbr title="Solution Logicielles et Applications Métier">SLAM</abbr></b>) à l'<b>Institut d'Informatique Appliquée</b>, je cherche constamment à approfondir mes connaissances et à relever de nouveaux défis techniques.
+                </p>
                 <br>
-                Mon approche du développement est axée sur la création de solutions élégantes et maintenables, en privilégiant les bonnes pratiques et la qualité du code.
-                <br>
-                Passionné par Linux, j'aime également découvrir de nouveaux outils et technologies pour améliorer mon workflow et mes compétences.
+                <p>
+                    Depuis, j'ai eu l'opportunité de travailler sur divers projets stimulants qui m'ont permis d'affiner mes compétences en <b>PHP</b>, <b>Javascript</b> ou encore en <b>gestion de serveur</b>.
+                </p>
+                <p>
+                    Mon approche du développement est axée sur la création de solutions <b>élégantes et maintenables</b>, en privilégiant les <b>bonnes pratiques et la qualité du code</b>.
+                </p>
+                <p>
+                    Passionné par <b>Linux</b>, j'aime également découvrir de <b>nouveaux outils et technologies</b> pour améliorer mon workflow et mes compétences.
+                </p>
             </div>
         </div>
         <div class="about-download fade-up">
@@ -59,7 +71,7 @@ function processDownload(url: string) {
                 <a href="https://drive.proton.me/urls/3K6ECJ67XW#KbE6lBiGDX0m" target="_blank" ref="noopener noreferrer">
                     Mon CV
                 </a>
-                <a href="#" @click="(e: Event) => handleDownloadClick('https://drive.proton.me/urls/NS6CYJD490#JH6HRw7QaeuX', e)">
+                <a href="#" @click="(e: Event) => handleDownloadClick('https://drive.proton.me/urls/RKEEWPY850#pSLzqcOjwuPV', e)">
                     Mon tableau
                     <br>
                     pour l'E5
@@ -71,7 +83,7 @@ function processDownload(url: string) {
 </template>
 
 <style scoped lang="scss">
-#about {
+#a-propos {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -94,19 +106,20 @@ function processDownload(url: string) {
         }
 
         .about-content-items {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
             text-align: justify;
             max-width: 40%;
             color: var(--font-color);
             font-family: "Inter", sans-serif;
             font-weight: 400;
             line-height: 1.5;
+            
+            p {
+                display: block;
+                margin: 0.4rem 0;
+            }
 
             br {
-                margin: 1rem 0;
+                margin: 0.4rem 0;
             }
         }
     }

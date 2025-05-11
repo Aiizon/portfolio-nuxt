@@ -152,13 +152,13 @@ useScrollAnimation();
             transition: filter 0.3s linear;
 
             &.loading {
-                filter: brightness(160%);
+                filter: brightness(1.6);
                 cursor: not-allowed;
             }
-        }
-
-        button:hover {
-            filter: brightness(1.3);
+    
+            &:hover {
+                filter: brightness(1.3);
+            }
         }
     }
 
