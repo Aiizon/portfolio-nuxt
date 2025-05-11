@@ -24,7 +24,7 @@ const { data: projects } = await useAsyncData('projects', () => {
                 <div class="projects-item-content">
                     <h2>{{ project.seo.title }}</h2>
                     <p>{{ project.meta.shortDescription }}</p>
-                    <p>Technologies utilisées : {{ project.meta.tags.join(', ') }}</p>
+                    <p>Technologies utilisées : <b>{{ project.meta.tags.join(', ') }}</b></p>
                     <NuxtLink :to="`projet/${String(project.meta.slug)}`">En savoir plus</NuxtLink>
                 </div>
             </div>
@@ -98,6 +98,10 @@ const { data: projects } = await useAsyncData('projects', () => {
 
                 p {
                     font-size: var(--text-medium);
+
+                    b {
+                        margin: 0;
+                    };
                 }
 
                 a {

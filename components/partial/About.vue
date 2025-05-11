@@ -47,11 +47,11 @@ function processDownload(url: string) {
                 </p>
                 <br>
                 <p>
-                    Mon parcours dans le développement a débuté au <b>lycée en 2021</b>. J'y ai effectué un Baccalauréat général (mention bien) avec les options Physique-Chimie et <abbr title="Numérique et Sciences de l'Informatique">NSI</abbr>.
+                    Mon parcours dans le développement a débuté au <b>lycée en 2021</b>. J'y ai effectué un Baccalauréat général (mention <b>bien</b>) avec les options <b>Physique-Chimie</b> et <b><abbr title="Numérique et Sciences de l'Informatique">NSI</abbr></b>.
                 </p>
                 <br>
                 <p>
-                    Actuellement en <b>BTS <abbr title="Service Informatique aux Organisations">SIO</abbr> (option <abbr title="Solution Logicielles et Applications Métier">SLAM</abbr> </b> à l'<b>Institut d'Informatique Appliquée</b>, je cherche constamment à approfondir mes connaissances et à relever de nouveaux défis techniques.
+                    Actuellement en <b>BTS <abbr title="Service Informatique aux Organisations">SIO</abbr> (option <abbr title="Solution Logicielles et Applications Métier">SLAM</abbr></b>) à l'<b>Institut d'Informatique Appliquée</b>, je cherche constamment à approfondir mes connaissances et à relever de nouveaux défis techniques.
                 </p>
                 <br>
                 <p>

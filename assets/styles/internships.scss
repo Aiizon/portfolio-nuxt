@@ -1,4 +1,6 @@
 .internship-body {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   color: var(--font-color);
   font-family: "Inter", sans-serif;
@@ -35,6 +37,7 @@
 
   p {
     margin: 1rem 0;
+    text-align: justify;
   }
 
   ul, ol {
@@ -63,9 +66,10 @@
   }
 
   img {
+    display: block;
     max-width: 100%;
     border-radius: 10px;
-    margin: 1.5rem 0;
+    margin: 1.5rem auto;
   }
 
   blockquote {

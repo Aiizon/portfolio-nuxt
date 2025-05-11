@@ -139,10 +139,10 @@ onMounted(() => {
         font-weight: 500;
         font-size: var(--text-medium);
         transition: filter 0.3s;
-    }
-
-    .return:hover {
-        filter: brightness(1.2);
+    
+        &:hover {
+            filter: brightness(1.2);
+        }
     }
 
     @media (max-width: 768px) {
