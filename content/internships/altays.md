@@ -31,6 +31,9 @@ Une équipe assurance qualité est aussi présente pour assurer la qualité de n
 Le SIRH (Système Informatisé de Ressources Humaines) Altays est composé d’un ensemble de modules interconnectés. 
 Au cours de mon stage, j’ai eu l’occasion de travailler sur les modules **Dossier des Salariés** (abrégé en **DS**) et **Entretiens**, bien qu’il en existe d’autres.
 
+Ces modules sont constitués d'un back-end utilisant Symfony, ainsi que d'un front-end utilisant VueJS. Pour les projets les plus anciens, dont ces deux derniers, 
+le front-end utilise encore le moteur de template de Symfony, Twig.
+
 #### DS
 
 Le module DS permet est le **cœur de la suite**, permettant de gérer les dossiers des salariés. On peut y renseigner les **informations des salariés**, 
