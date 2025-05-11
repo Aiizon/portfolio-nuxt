@@ -4,8 +4,8 @@ title: Portfolio Personnel
 slug: portfolio
 shortDescription: Portfolio personnel réalisé avec Nuxt 3 et TypeScript.
 description: Ce portfolio présente mes compétences et projets en développement web.
-bannerImage: /img/projects/portfolio-banner.jpg
-smallImage: /img/projects/portfolio-small.jpg
+bannerImage: /img/projects/portfolio/portfolio-banner.jpg
+smallImage: /img/projects/portfolio/portfolio-small.jpg
 repositoryLink: https://github.com/Aiizon/portfolio
 demoLink: https://www.kbonneau.fr
 tags: ["Nuxt", "TypeScript", "SCSS"]

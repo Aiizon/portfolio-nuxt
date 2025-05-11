@@ -4,8 +4,8 @@ title: WorkTogether Web
 slug: worktogether-web
 shortDescription: Application web de location et gestion d'espace en Datacenter.
 description: Une plateforme en ligne pour commander des unités dans des baies de Datacenter, les gérer et les administrer.
-bannerImage: /img/projects/wt-web-banner.jpg
-smallImage: /img/projects/wt-web-small.png
+bannerImage: /img/projects/wt-web/wt-web-banner.png
+smallImage: /img/projects/wt-web/wt-web-small.png
 repositoryLink: https://github.com/Aiizon/wt-web
 demoLink: null
 tags: ["Symfony", "TypeScript", "MySQL", "MongoDB"]
