@@ -29,12 +29,4 @@ ENV PORT=3000
 
 EXPOSE 3000
 
-RUN mkdir -p /opt/certbot/conf/live/kbonneau.fr
-RUN openssl req -x509 -nodes -newkey rsa:2048 -days 1 \
-      -keyout /opt/certbot/conf/live/kbonneau.fr/privkey.pem \
-      -out /opt/certbot/conf/live/kbonneau.fr/fullchain.pem \
-      -subj '/CN=localhost'
-RUN ln -sf /opt/certbot/conf/live/kbonneau.fr/privkey.pem /etc/nginx/ssl/privkey.pem
-RUN ln -sf /opt/certbot/conf/live/kbonneau.fr/fullchain.pem /etc/nginx/ssl/fullchain.pem
-
 CMD ["node", ".output/server/index.mjs"]
